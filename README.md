@@ -45,14 +45,13 @@
   2. Đăng nhập bằng tài khoản Google của bạn.
   3. Bấm vào nút **"Get API key"** (ở menu bên trái hoặc góc trên).
   4. Chọn **"Create API key"** và tạo khóa cho dự án mới hoặc dự án hiện có.
-  5. Sao chép API key đã tạo (nó sẽ có dạng bắt đầu bằng `AIzaSy...`).
-
+  5. Sao chép API key đã tạo (dán vào biến môi trường `GEMINI_API_KEY`).
 * **OpenAI API Key (OPENAI_API_KEY):**
   1. Truy cập [OpenAI API Keys Platform](https://platform.openai.com/api-keys).
   2. Đăng nhập/Đăng ký tài khoản OpenAI của bạn.
   3. Bấm vào nút **"Create new secret key"**.
   4. Đặt tên gợi nhớ cho key (ví dụ: `VinUni_Lab1`) và chọn quyền hạn (mặc định là All).
-  5. Sao chép API key đã tạo (nó sẽ có dạng bắt đầu bằng `sk-proj-...`).
+  5. Sao chép API key đã tạo (dán vào biến môi trường `OPENAI_API_KEY`).
   > [!WARNING]
   > Key OpenAI chỉ hiển thị duy nhất **một lần** ngay khi tạo. Hãy lưu trữ key an toàn.
 
@@ -64,20 +63,20 @@ Bạn có thể thiết lập biến môi trường trực tiếp từ terminal 
 
 * **Windows (PowerShell):**
   ```powershell
-  $env:OPENAI_API_KEY="sk-proj-your-openai-key-here"
-  $env:GEMINI_API_KEY="AIzaSy-your-gemini-key-here"
+  $env:OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+  $env:GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
   ```
 
 * **Windows (CMD):**
   ```cmd
-  set OPENAI_API_KEY=sk-proj-your-openai-key-here
-  set GEMINI_API_KEY=AIzaSy-your-gemini-key-here
+  set OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+  set GEMINI_API_KEY=YOUR_GEMINI_API_KEY
   ```
 
 * **macOS/Linux (Terminal):**
   ```bash
-  export OPENAI_API_KEY="sk-proj-your-openai-key-here"
-  export GEMINI_API_KEY="AIzaSy-your-gemini-key-here"
+  export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+  export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
   ```
 
 > [!TIP]
@@ -178,13 +177,13 @@ Streaming giúp tạo trải nghiệm người dùng mượt mà giống như Ch
 ### 🔴 Lỗi `AuthenticationError` hoặc `API Key Not Found`
 * **Nguyên nhân:** API key chưa được thiết lập vào biến môi trường.
 * **Cách khắc phục:**
-  * **MacOS/Linux:** `export GEMINI_API_KEY="AIzaSy..."`
-  * **Windows (PowerShell):** `$env:GEMINI_API_KEY="AIzaSy..."`
-  * **Windows (CMD):** `set GEMINI_API_KEY=AIzaSy...`
+  * **MacOS/Linux:** `export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"`
+  * **Windows (PowerShell):** `$env:GEMINI_API_KEY="YOUR_GEMINI_API_KEY"`
+  * **Windows (CMD):** `set GEMINI_API_KEY=YOUR_GEMINI_API_KEY`
 
 ### 🔴 Lỗi `RateLimitError`
 * **Nguyên nhân:** Bạn gửi quá nhiều request trong một khoảng thời gian ngắn trên tài khoản Free.
 * **Cách khắc phục:** Triển khai **Task Bonus A (`retry_with_backoff`)** để tự động thử lại sau vài giây!
 
 ---
-> **💡 Vibe Coding Tip:** Hãy tận dụng Cursor hoặc Copilot bằng cách cung cấp cho nó ngữ cảnh của file `student_guide.md` và `template.py` để viết code nháp nhanh chóng, sau đó kiểm tra và hoàn thiện bằng tay!
+> **💡 Vibe Coding Tip:** Hãy tận dụng Cursor hoặc Copilot bằng cách cung cấp cho nó ngữ cảnh của file `student_guide.md` và `template.py` để viết code nháp nhanh chóng, sau đó kiểm tra và hoàn thiện bằng tay! -->

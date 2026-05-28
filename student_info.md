@@ -1,0 +1,4 @@
+- Họ và tên: Nguyễn Thành Tài
+- Email: n.t.tai435@gmail.com
+- Github username: Tai-TZ
+- Discord username: ngtaiz
