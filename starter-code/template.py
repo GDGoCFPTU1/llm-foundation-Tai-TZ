@@ -299,8 +299,15 @@ def streaming_chatbot() -> None:
                     full_reply += chunk_text
                     
             except (ImportError, Exception):
-                # Option B: Fallback to legacy google-generativeai stream
-                import google.generativeai as genai
+                # Option B: Fallback to legacy google-generativeai stream (if installed)
+                try:
+                    import google.generativeai as genai  # type: ignore[import-not-found]
+                except ImportError as e:
+                    raise ImportError(
+                        "Missing Google Gemini SDK. Install `google-genai` (recommended) "
+                        "or `google-generativeai` to run streaming_chatbot."
+                    ) from e
+
                 genai.configure(api_key=api_key)
                 model_inst = genai.GenerativeModel(GEMINI_MODEL)
                 
